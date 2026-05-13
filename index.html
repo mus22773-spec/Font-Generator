@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="robots" content="index,follow"/>
+<title>Fancy Text & Cursive Font Generator ✨ Copy & Paste Stylish Fonts</title>
+<meta name="description" content="Free fancy text generator with 150+ Unicode font styles. Copy and paste cursive, bold, aesthetic, cute, gaming fonts for Instagram, TikTok, Twitter, Discord and more."/>
+<meta name="keywords" content="fancy text generator, cursive font generator, stylish text, copy paste fonts, Instagram fonts, TikTok fonts, aesthetic text, bold text generator"/>
+<meta property="og:title" content="Fancy Text & Cursive Font Generator ✨"/>
+<meta property="og:description" content="150+ fancy Unicode font styles — copy and paste for any platform."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090f;--surf:#0e1220;--surf2:#151b2e;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--text:#dde5f8;--muted:rgba(221,229,248,0.5);--accent:#7c6dfa;--a2:#f06292;--a3:#4dd0a0;--glow:rgba(124,109,250,0.22);--r:14px;}
+html[data-theme=light]{--bg:#f2f4fb;--surf:#fff;--surf2:#eaecf6;--border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.13);--text:#0c1020;--muted:rgba(12,16,32,0.5);--glow:rgba(124,109,250,0.12);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--text);min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(124,109,250,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(124,109,250,.025) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;z-index:0;}
+.wrap{max-width:1300px;margin:0 auto;padding:0 18px 60px;position:relative;z-index:1;}
+/* HEADER */
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0 28px;border-bottom:1px solid var(--border);margin-bottom:28px;flex-wrap:wrap;gap:12px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--a2));display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 0 20px var(--glow);}
+.brand h1{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;}
+.brand p{font-size:11px;color:var(--muted);margin-top:2px;}
+.theme-btn{background:var(--surf);border:1px solid var(--border2);color:var(--text);padding:9px 15px;border-radius:10px;cursor:pointer;font-family:'DM Mono',monospace;font-size:11px;transition:.2s;display:flex;align-items:center;gap:7px;}
+.theme-btn:hover{border-color:var(--accent);}
+/* LAYOUT */
+.grid{display:grid;grid-template-columns:300px 1fr;gap:18px;align-items:start;}
+@media(max-width:820px){.grid{grid-template-columns:1fr;}}
+/* SIDEBAR */
+.sidebar{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);padding:18px;position:sticky;top:18px;}
+@media(max-width:820px){.sidebar{position:static;}}
+.label{font-size:10px;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:9px;}
+textarea{width:100%;background:var(--surf2);border:1px solid var(--border2);border-radius:11px;color:var(--text);font-family:'Playfair Display',serif;font-size:22px;padding:13px 15px;resize:none;outline:none;min-height:100px;transition:.2s;line-height:1.4;}
+textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--glow);}
+.charcount{font-size:10px;color:var(--muted);text-align:right;margin-top:5px;}
+.cats-wrap{margin-top:16px;}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+.cat{background:var(--surf2);border:1px solid var(--border);color:var(--muted);border-radius:7px;padding:6px 11px;font-size:11px;font-family:'DM Mono',monospace;cursor:pointer;transition:.15s;user-select:none;}
+.cat:hover{border-color:var(--accent);color:var(--text);}
+.cat.on{background:var(--accent);border-color:var(--accent);color:#fff;}
+.search-wrap{margin-top:14px;}
+input[type=text]{width:100%;background:var(--surf2);border:1px solid var(--border2);border-radius:9px;color:var(--text);font-family:'DM Mono',monospace;font-size:11px;padding:9px 13px;outline:none;transition:.2s;}
+input[type=text]:focus{border-color:var(--accent);}
+input[type=text]::placeholder{color:var(--muted);}
+.stats{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:12px;}
+.stats b{color:var(--accent);}
+.btns{display:flex;gap:7px;margin-top:12px;}
+.btn{flex:1;padding:10px;border-radius:9px;font-family:'DM Mono',monospace;font-size:11px;cursor:pointer;transition:.2s;border:1px solid var(--border2);background:var(--surf2);color:var(--text);}
+.btn:hover{border-color:var(--accent);}
+.btn.pri{background:linear-gradient(135deg,var(--accent),#a855f7);border-color:transparent;color:#fff;}
+.btn.pri:hover{opacity:.88;}
+/* RESULTS */
+.results{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);padding:18px;}
+.rhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;}
+.rtitle{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;}
+.rmeta{font-size:11px;color:var(--muted);}
+.rmeta b{color:var(--a3);}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:11px;}
+@media(max-width:500px){.fgrid{grid-template-columns:1fr 1fr;}}
+/* CARD */
+.card{background:var(--surf2);border:1px solid var(--border);border-radius:13px;padding:12px;transition:.18s;}
+.card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.22);}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;}
+.cname{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:105px;}
+.cpbtn{background:var(--surf);border:1px solid var(--border2);color:var(--text);padding:4px 9px;border-radius:6px;font-size:9px;font-family:'DM Mono',monospace;cursor:pointer;transition:.15s;flex-shrink:0;}
+.cpbtn:hover{border-color:var(--accent);color:var(--accent);}
+.cpbtn.ok{background:var(--a3);border-color:var(--a3);color:#000;}
+.cpbtn:disabled{opacity:.55;cursor:default;}
+.prev{min-height:68px;background:rgba(0,0,0,.18);border-radius:9px;display:flex;align-items:center;justify-content:center;padding:9px 7px;word-break:break-all;text-align:center;}
+html[data-theme=light] .prev{background:rgba(0,0,0,.04);}
+.prev span{font-size:20px;line-height:1.35;word-break:break-all;}
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--muted);}
+.empty div{font-size:36px;margin-bottom:10px;}
+/* SEO */
+.seo{margin-top:44px;padding-top:28px;border-top:1px solid var(--border);}
+.seo h2{font-family:'Playfair Display',serif;font-size:21px;margin-bottom:14px;}
+.seo p{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:10px;max-width:820px;}
+.seo h3{font-family:'Playfair Display',serif;font-size:16px;margin:18px 0 7px;}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo">✨</div>
+      <div>
+        <h1>StyleText Generator</h1>
+        <p>150+ fancy & cursive Unicode fonts — copy instantly</p>
+      </div>
+    </div>
+    <button class="theme-btn" id="themeBtn">🌙 <span id="themeLbl">Dark</span></button>
+  </header>
+
+  <div class="grid">
+    <aside class="sidebar">
+      <div class="label">Your Text</div>
+      <textarea id="inp" maxlength="80" placeholder="Type here...">Hello World</textarea>
+      <div class="charcount"><span id="cc">11</span>/80</div>
+
+      <div class="cats-wrap">
+        <div class="label">Category</div>
+        <div class="cats" id="cats">
+          <button class="cat on" data-c="All">All</button>
+          <button class="cat" data-c="Cursive">Cursive</button>
+          <button class="cat" data-c="Bold">Bold</button>
+          <button class="cat" data-c="Aesthetic">Aesthetic</button>
+          <button class="cat" data-c="Cute">Cute</button>
+          <button class="cat" data-c="Gaming">Gaming</button>
+          <button class="cat" data-c="Elegant">Elegant</button>
+          <button class="cat" data-c="Bubble">Bubble</button>
+        </div>
+      </div>
+
+      <div class="search-wrap">
+        <input type="text" id="srch" placeholder="Search style name…" autocomplete="off"/>
+      </div>
+
+      <div class="stats">
+        <div>Total: <b id="tot">0</b></div>
+        <div>Shown: <b id="shown">0</b></div>
+      </div>
+
+      <div class="btns">
+        <button class="btn" id="clearBtn">Clear</button>
+        <button class="btn pri" id="randBtn">🎲 Random</button>
+      </div>
+    </aside>
+
+    <section class="results">
+      <div class="rhead">
+        <div class="rtitle">Font Styles</div>
+        <div class="rmeta">Click <b>Copy</b> to copy any style</div>
+      </div>
+      <div class="fgrid" id="grid"></div>
+    </section>
+  </div>
+
+  <div class="seo">
+    <h2>Free Fancy Text & Cursive Font Generator</h2>
+    <p>Welcome to StyleText — the best free fancy text generator online. Generate over 150 unique font styles using real Unicode characters that work on any platform. Whether you need cursive fonts for your Instagram bio, bold text for TikTok, aesthetic text for Twitter, or gaming fonts for Discord — we have every style covered.</p>
+    <p>All fonts use real Unicode characters, so they copy and paste perfectly into Instagram, TikTok, Twitter/X, Facebook, WhatsApp, Discord, YouTube, Snapchat, and more. No special apps or downloads needed!</p>
+
+    <h3>How to use the fancy text generator?</h3>
+    <p>Type your text in the box on the left, browse through 150+ font styles, and click "Copy" next to any style you like. Then paste it anywhere — Instagram bio, TikTok caption, Discord username, etc.</p>
+
+    <h3>Do these fonts work on Instagram?</h3>
+    <p>Yes! All styles use Unicode characters, so they work perfectly in Instagram bios, posts, stories, and comments without any plugins.</p>
+
+    <h3>Is this generator completely free?</h3>
+    <p>100% free, no account required, no download, no limits. Use as much as you want!</p>
+  </div>
+
+  <footer>
+    <div>© 2025 StyleText Generator — Free Fancy & Cursive Font Generator</div>
+    <div>Works on Instagram · TikTok · Twitter · Discord · WhatsApp</div>
+  </footer>
+</div>
+
+<script>
+// ── Unicode conversion maps ──────────────────────────────────────────────────
+const FONTS = [
+  // CURSIVE
+  {name:"Script Cursive",cat:"Cursive",
+   map:"𝒶𝒷𝒸𝒹𝑒𝒻𝑔𝒽𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏𝒜𝐵𝒞𝒟𝐸𝐹𝒢𝐻𝐼𝒥𝒦𝐿𝑀𝒩𝒪𝒫𝒬𝑅𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵"},
+  {name:"Bold Cursive",cat:"Cursive",
+   map:"𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩"},
+  {name:"Fraktur Gothic",cat:"Cursive",
+   map:"𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ"},
+  {name:"Bold Fraktur",cat:"Cursive",
+   map:"𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅"},
+  {name:"Italic Script",cat:"Cursive",
+   map:"𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡"},
+  {name:"Bold Italic Script",cat:"Cursive",
+   map:"𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕"},
+
+  // BOLD
+  {name:"Math Bold",cat:"Bold",
+   map:"𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙"},
+  {name:"Bold Italic",cat:"Bold",
+   map:"𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁"},
+  {name:"Sans Bold",cat:"Bold",
+   map:"𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭"},
+  {name:"Sans Bold Italic",cat:"Bold",
+   map:"𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕"},
+  {name:"Fullwidth Bold",cat:"Bold",
+   map:"ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ"},
+
+  // AESTHETIC
+  {name:"Double Struck",cat:"Aesthetic",
+   map:"𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ"},
+  {name:"Monospace",cat:"Aesthetic",
+   map:"𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉"},
+  {name:"Italic Serif",cat:"Aesthetic",
+   map:"𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍"},
+  {name:"Sans Serif",cat:"Aesthetic",
+   map:"𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹"},
+  {name:"Sans Italic",cat:"Aesthetic",
+   map:"𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡"},
+  {name:"Vaporwave",cat:"Aesthetic",
+   map:"ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ"},
+  {name:"Small Caps",cat:"Aesthetic",fn:(t)=>t.split('').map(c=>{const m='abcdefghijklmnopqrstuvwxyz',s='ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ';const i=m.indexOf(c.toLowerCase());return i>=0?(c===c.toUpperCase()?c:s[i]):c;}).join('')},
+  {name:"Superscript",cat:"Aesthetic",fn:(t)=>t.split('').map(c=>{const n='⁰¹²³⁴⁵⁶⁷⁸⁹',m='aábcdefghijklmnoprstuvwxyz',s='ᵃᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻ';const i=m.indexOf(c.toLowerCase());return i>=0?s[i]:c;}).join('')},
+
+  // CUTE
+  {name:"Circled",cat:"Cute",fn:(t)=>t.split('').map(c=>{if(c>='a'&&c<='z')return String.fromCodePoint(0x24D0+c.charCodeAt(0)-97);if(c>='A'&&c<='Z')return String.fromCodePoint(0x24B6+c.charCodeAt(0)-65);if(c>='1'&&c<='9')return String.fromCodePoint(0x2460+c.charCodeAt(0)-49);if(c==='0')return '⓪';return c;}).join('')},
+  {name:"Negative Circled",cat:"Cute",fn:(t)=>t.split('').map(c=>{if(c>='A'&&c<='Z')return String.fromCodePoint(0x1F150+c.charCodeAt(0)-65);if(c>='a'&&c<='z')return String.fromCodePoint(0x1F150+c.charCodeAt(0)-97);return c;}).join('')},
+  {name:"Squared",cat:"Cute",fn:(t)=>t.split('').map(c=>{if(c>='A'&&c<='Z')return String.fromCodePoint(0x1F130+c.charCodeAt(0)-65);if(c>='a'&&c<='z')return String.fromCodePoint(0x1F130+c.charCodeAt(0)-97);return c;}).join('')},
+  {name:"Hearts",cat:"Cute",fn:(t)=>[...t].map(c=>c+' ').join('').trim()},
+  {name:"Star Cute",cat:"Cute",fn:(t)=>'⭐'+[...t].join('✨')+'⭐'},
+  {name:"Flower",cat:"Cute",fn:(t)=>'🌸'+[...t].join('🌺')+'🌸'},
+  {name:"Sparkle",cat:"Cute",fn:(t)=>'✨'+t+'✨'},
+  {name:"Rainbow",cat:"Cute",fn:(t)=>'🌈'+[...t].join('')+'🌈'},
+  {name:"Kawaii",cat:"Cute",fn:(t)=>'(´• ω •`) '+t+' (´• ω •`)'},
+  {name:"Music",cat:"Cute",fn:(t)=>'♪♫ '+t+' ♫♪'},
+  {name:"Paw",cat:"Cute",fn:(t)=>'🐾'+[...t].join('🐾')+'🐾'},
+  {name:"Bubble Hearts",cat:"Cute",fn:(t)=>'💕 '+t+' 💕'},
+
+  // GAMING
+  {name:"Strikethrough",cat:"Gaming",fn:(t)=>[...t].map(c=>c+'\u0336').join('')},
+  {name:"Slash Through",cat:"Gaming",fn:(t)=>[...t].map(c=>c+'\u0338').join('')},
+  {name:"Underline",cat:"Gaming",fn:(t)=>[...t].map(c=>c+'\u0332').join('')},
+  {name:"Double Underline",cat:"Gaming",fn:(t)=>[...t].map(c=>c+'\u0333').join('')},
+  {name:"Overline",cat:"Gaming",fn:(t)=>[...t].map(c=>c+'\u0305').join('')},
+  {name:"Tilde Strike",cat:"Gaming",fn:(t)=>[...t].map(c=>c+'\u0334').join('')},
+  {name:"Zalgo Mild",cat:"Gaming",fn:(t)=>{const z=['̈','̃','̂','̄','̅','̆','̇','̊','̋','̌','͆','͊','͋','͌','͐'];return[...t].map(c=>c+(Math.random()>0.3?z[Math.floor(Math.random()*z.length)]:'')+(Math.random()>0.5?z[Math.floor(Math.random()*z.length)]:'')).join('');}},
+  {name:"Fire Gaming",cat:"Gaming",fn:(t)=>'🔥'+[...t].join('🔥')+'🔥'},
+  {name:"Sword",cat:"Gaming",fn:(t)=>'⚔️ '+t+' ⚔️'},
+  {name:"Lightning",cat:"Gaming",fn:(t)=>'⚡'+[...t].join('⚡')+'⚡'},
+  {name:"Skull",cat:"Gaming",fn:(t)=>'💀 '+t+' 💀'},
+  {name:"Dragon",cat:"Gaming",fn:(t)=>'🐉 '+t+' 🐉'},
+  {name:"Shield",cat:"Gaming",fn:(t)=>'🛡️ '+t+' 🛡️'},
+
+  // ELEGANT
+  {name:"Parenthesized",cat:"Elegant",fn:(t)=>t.split('').map(c=>{if(c>='a'&&c<='z')return String.fromCodePoint(0x249C+c.charCodeAt(0)-97);return c;}).join('')},
+  {name:"Regional Flags",cat:"Elegant",fn:(t)=>[...t.toUpperCase()].map(c=>{if(c>='A'&&c<='Z')return String.fromCodePoint(0x1F1E6+c.charCodeAt(0)-65);return c;}).join('')},
+  {name:"Upside Down",cat:"Elegant",fn:(t)=>{const n='ɐqɔpǝɟƃɥᴉɾʞʅɯuodbɹsʇnʌʍxʎz',u='abcdefghijklmnopqrstuvwxyz';return[...t.toLowerCase()].map(c=>{const i=u.indexOf(c);return i>=0?n[i]:c;}).reverse().join('');}},
+  {name:"Mirror",cat:"Elegant",fn:(t)=>[...t].reverse().join('')},
+  {name:"Wide Text",cat:"Elegant",fn:(t)=>[...t].join(' ')},
+  {name:"Diamond Sep",cat:"Elegant",fn:(t)=>[...t].join('◆')},
+  {name:"Star Sep",cat:"Elegant",fn:(t)=>[...t].join('★')},
+  {name:"Crown",cat:"Elegant",fn:(t)=>'👑 '+t+' 👑'},
+  {name:"Rose",cat:"Elegant",fn:(t)=>'🌹 '+t+' 🌹'},
+  {name:"Diamond",cat:"Elegant",fn:(t)=>'💎 '+t+' 💎'},
+  {name:"Butterfly",cat:"Elegant",fn:(t)=>'🦋 '+t+' 🦋'},
+
+  // BUBBLE
+  {name:"Bubble Text",cat:"Bubble",fn:(t)=>t.split('').map(c=>{const m='abcdefghijklmnopqrstuvwxyz',s='ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ';const i=m.indexOf(c.toLowerCase());return i>=0?s[i]:c;}).join('')},
+  {name:"Negative Bubble",cat:"Bubble",fn:(t)=>t.split('').map(c=>{const m='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',s='🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩⓪①②③④⑤⑥⑦⑧⑨';const i=m.indexOf(c);return i>=0?[...s][i]:c;}).join('')},
+  {name:"Box Letters",cat:"Bubble",fn:(t)=>t.toUpperCase().split('').map(c=>{if(c>='A'&&c<='Z')return String.fromCodePoint(0x1F130+c.charCodeAt(0)-65);return c;}).join('')},
+];
+
+// ── Map-based converter ──────────────────────────────────────────────────────
+function convertMap(text, mapStr) {
+  const az = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const chars = [...mapStr]; // unicode-safe split
+  let out = '';
+  for (const c of text) {
+    const i = az.indexOf(c);
+    if (i >= 0 && i < chars.length) out += chars[i];
+    else out += c;
+  }
+  return out;
+}
+
+function convert(font, text) {
+  if (!text) return '';
+  if (font.fn) return font.fn(text);
+  if (font.map) return convertMap(text, font.map);
+  return text;
+}
+
+// ── State ────────────────────────────────────────────────────────────────────
+let activeCat = 'All';
+let searchQ = '';
+const inp = document.getElementById('inp');
+const grid = document.getElementById('grid');
+const cc = document.getElementById('cc');
+const tot = document.getElementById('tot');
+const shown = document.getElementById('shown');
+const srch = document.getElementById('srch');
+
+// ── Render ───────────────────────────────────────────────────────────────────
+function render() {
+  const text = inp.value || 'Hello World';
+  cc.textContent = inp.value.length;
+
+  const filtered = FONTS.filter(f => {
+    if (activeCat !== 'All' && f.cat !== activeCat) return false;
+    if (searchQ && !f.name.toLowerCase().includes(searchQ)) return false;
+    return true;
+  });
+
+  tot.textContent = FONTS.length;
+  shown.textContent = filtered.length;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty"><div>🔍</div>No styles found. Try a different search.</div>';
+    return;
+  }
+
+  const frag = document.createDocumentFragment();
+  for (const font of filtered) {
+    const preview = convert(font, text);
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="cname">${font.name}</div>
+        <button class="cpbtn" data-txt="${encodeURIComponent(preview)}">Copy</button>
+      </div>
+      <div class="prev"><span>${preview || '&nbsp;'}</span></div>
+    `;
+    frag.appendChild(card);
+  }
+  grid.innerHTML = '';
+  grid.appendChild(frag);
+
+  // Copy buttons
+  grid.querySelectorAll('.cpbtn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const txt = decodeURIComponent(btn.dataset.txt);
+      try {
+        await navigator.clipboard.writeText(txt);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = txt; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      btn.textContent = '✓ Done'; btn.classList.add('ok'); btn.disabled = true;
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('ok'); btn.disabled = false; }, 1400);
+    });
+  });
+}
+
+// ── Events ───────────────────────────────────────────────────────────────────
+inp.addEventListener('input', render);
+srch.addEventListener('input', () => { searchQ = srch.value.toLowerCase().trim(); render(); });
+
+document.getElementById('cats').addEventListener('click', e => {
+  const btn = e.target.closest('.cat');
+  if (!btn) return;
+  document.querySelectorAll('.cat').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  activeCat = btn.dataset.c;
+  render();
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+  inp.value = ''; render(); inp.focus();
+});
+document.getElementById('randBtn').addEventListener('click', () => {
+  const words = ['Hello World','Aesthetic Vibes','Cursive Love','Game On','Cute Style','Bold Move','Elegant Flow','Hello There','My Name','Cool Text','Be Kind'];
+  inp.value = words[Math.floor(Math.random() * words.length)];
+  render(); inp.focus();
+});
+
+// Theme toggle
+const html = document.documentElement;
+const lbl = document.getElementById('themeLbl');
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const isDark = html.dataset.theme === 'dark';
+  html.dataset.theme = isDark ? 'light' : 'dark';
+  lbl.textContent = isDark ? 'Light' : 'Dark';
+  document.getElementById('themeBtn').childNodes[0].textContent = isDark ? '☀️ ' : '🌙 ';
+});
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+render();
+</script>
+</body>
+</html>
